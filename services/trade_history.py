@@ -1,5 +1,5 @@
 from data.exchange_data import exchange_data
-from utilities.time_logger import TimeLogger
+from utility.time_logger import TimeLogger
 class TradeHistory(TimeLogger):
     """This class helps to maintain trade history and calculation associated with it
     

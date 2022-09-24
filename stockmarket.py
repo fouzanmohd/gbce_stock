@@ -1,5 +1,5 @@
-from stockservices.stockservices import StockServices
-from stockservices.trade import Trade
+from services.stockservices import StockServices
+from services.trade import Trade
 
 class StockMarket(StockServices,Trade):
     """This is the main Class, Initiate this class to use all functionalities of the StockMarket.

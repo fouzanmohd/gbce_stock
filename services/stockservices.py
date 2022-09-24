@@ -1,5 +1,5 @@
 from data.exchange_data import exchange_data
-from utilities.utilities import Utilities
+from utility.utilities import Utilities
 
 class StockServices(Utilities):
     
