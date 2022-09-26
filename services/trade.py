@@ -1,8 +1,7 @@
 from utility.time_logger import TimeLogger
 from services.trade_history import TradeHistory
-from utility.utilities import Utilities
 from data.exchange_data import exchange_data
-class Trade(Utilities, TradeHistory, TimeLogger):
+class Trade(TradeHistory, TimeLogger):
     """This class helps to maintain trade related functionalities
 
     Methods

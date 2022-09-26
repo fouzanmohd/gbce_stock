@@ -1,6 +1,7 @@
 from data.exchange_data import exchange_data
 from utility.time_logger import TimeLogger
-class TradeHistory(TimeLogger):
+from utility.utilities import Utilities
+class TradeHistory(TimeLogger,Utilities):
     """This class helps to maintain trade history and calculation associated with it
     
     Attributes
@@ -18,7 +19,6 @@ class TradeHistory(TimeLogger):
     """
     # dict to hold trade history data
     trades={}
-    
     def calculate_vws_price(self, symbol:str) -> float | int:
         
         """This method calculate Volume Weighted Stock Price based on trades in past 5 minutes
@@ -35,7 +35,6 @@ class TradeHistory(TimeLogger):
         
         # validating all the arguments provided to this method
         symbol = self.validate_stock_symbol(symbol,exchange_data)
-        
         time_before_5_min = self.get_time_window(5).timestamp()
         total_trade_amount = 0
         total_qty = 0
@@ -57,7 +56,6 @@ class TradeHistory(TimeLogger):
         Returns:
             int | float: returns the calculated GBCE value in integer or float format with maximum 3 decimals
         """
-        
         total_vws_price = 1
         if self.trades:
             for symbol in self.trades.keys():
