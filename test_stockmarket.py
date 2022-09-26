@@ -1,7 +1,7 @@
 import unittest
 from stockmarket import StockMarket
 
-stockmarket = StockMarket()
+stockmarket = StockMarket("GBCE")
 
 class TestStockMarket(unittest.TestCase):
     """A unit test class for testing all the functions of StockMarket class

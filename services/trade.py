@@ -10,7 +10,8 @@ class Trade(Utilities, TradeHistory, TimeLogger):
     record_trade:
         This method helps to log and record the trade
         
-    """
+    """        
+        
     def record_trade(self, symbol:str, quantity:float | int, price:float | int, order:str = "Buy"):
         
         """This method records a trade, with timestamp, quantity, buy or sell indicator and price and store in a dictionary
