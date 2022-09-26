@@ -14,5 +14,13 @@ class StockMarket(StockServices,Trade):
         StockServices (object): This object contains calculation methods such as calculate_dividend_yield and calculate_pe_ratio
         Trade (object): This object contains record_trade method, which can be used for recording a trade with timestamp,qty and Buy/Sell order
     """
-    def __init__(self):
-        print("StcokMarket created successfully.")
+    def __init__(self,name):
+        self.name = name
+        print(f"{name} StcokMarket created successfully.")
+
+def main():
+    gbce = StockMarket("GBCE")
+
+
+if __name__ == "__main__":
+    main()
